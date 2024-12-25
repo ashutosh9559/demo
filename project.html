@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Dashboard</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Tech Care</h2>
+            <nav>
+                <ul>
+                    <li>Overview</li>
+                    <li class="active">Patients</li>
+                    <li>Schedule</li>
+                    <li>Messages</li>
+                    <li>Transactions</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <section class="dashboard">
+                <h1 id="patient-name">Search Patient</h1>
+                
+                <!-- Search Input -->
+                <div>
+                    <input type="text" id="patient-search" placeholder="Enter patient's name" />
+                    <button onclick="fetchPatientData()">Search</button>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="bloodPressureChart"></canvas>
+                </div>
+                <div class="info-cards">
+                    <div class="card">
+                        <img src="respiratory rate@2x.png" alt="Respiratory Rate" />
+                        <p>Respiratory Rate: <span id="respiratory-rate">-</span> bpm</p>
+                    </div>
+                    <div class="card">
+                        <img src="temperature@2x.png" alt="Temperature" />
+                        <p>Temperature: <span id="temperature">-</span>°F</p>
+                    </div>
+                    <div class="card">
+                        <img src="HeartBPM@2x.png" alt="Heart Rate" />
+                        <p>Heart Rate: <span id="heart-rate">-</span> bpm</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Panel -->
+        <aside class="details">
+            <img id="profile-picture" src="Layer 2.png" alt="Patient Profile Picture">
+            <ul>
+                <li>Date of Birth: <span id="dob">-</span></li>
+                <li>Gender: <span id="gender">-</span></li>
+                <li>Contact Info: <span id="contact">-</span></li>
+                <li>Insurance: <span id="insurance">-</span></li>
+            </ul>
+        </aside>
+    </div>
+    <script src="project.js"></script>
+</body>
+</html>
